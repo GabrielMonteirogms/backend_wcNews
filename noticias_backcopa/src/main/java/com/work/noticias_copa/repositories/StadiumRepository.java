@@ -1,4 +1,7 @@
 package com.work.noticias_copa.repositories;
 
-public class StadiumRepository {
+import com.work.noticias_copa.entities.Stadium;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StadiumRepository extends JpaRepository<Stadium, Long> {
 }

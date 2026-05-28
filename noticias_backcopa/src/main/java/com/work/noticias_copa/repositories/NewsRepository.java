@@ -1,4 +1,7 @@
 package com.work.noticias_copa.repositories;
 
-public class NewsRepository {
+import com.work.noticias_copa.entities.News;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface NewsRepository extends JpaRepository<News, Long> {
 }

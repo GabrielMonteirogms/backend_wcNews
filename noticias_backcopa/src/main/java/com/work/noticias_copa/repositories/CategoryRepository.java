@@ -1,4 +1,7 @@
 package com.work.noticias_copa.repositories;
 
-public class CategoryRepository {
+import com.work.noticias_copa.entities.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 }
