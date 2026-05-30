@@ -4,5 +4,5 @@ import com.work.noticias_copa.entities.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface CommentCategory extends JpaRepository<Comment, Long> {
+public interface CommentRepository extends JpaRepository<Comment, Long> {
 }

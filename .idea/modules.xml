@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/noticias_copa.iml" filepath="$PROJECT_DIR$/.idea/noticias_copa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/noticias_backcopa/noticias_copa.iml" filepath="$PROJECT_DIR$/noticias_backcopa/noticias_copa.iml" />
     </modules>
   </component>
 </project>
