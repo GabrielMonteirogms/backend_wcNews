@@ -1,5 +1,6 @@
 package com.work.noticias_copa.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -37,5 +38,6 @@ public class Stadium implements Serializable {
     private Integer openedYear;
 
     @OneToMany(mappedBy = "stadium")
+    @JsonIgnore
     private List<News> news;
 }

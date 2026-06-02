@@ -1,5 +1,6 @@
 package com.work.noticias_copa.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.List;
@@ -31,5 +32,6 @@ public class Journalist implements java.io.Serializable {
     private String biography;
 
     @OneToMany(mappedBy = "journalist")
+    @JsonIgnore
     private List<News> news;
 }

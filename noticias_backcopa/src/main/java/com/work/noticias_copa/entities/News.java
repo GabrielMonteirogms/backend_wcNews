@@ -1,6 +1,7 @@
 package com.work.noticias_copa.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -9,7 +9,6 @@ public class NewsMapper {
     public static NewsResponseDTO toDTO(News news) {
 
         return new NewsResponseDTO(
-
                 news.getId(),
                 news.getTitle(),
                 news.getSummary(),
@@ -18,25 +17,24 @@ public class NewsMapper {
                 news.getFeatured(),
                 news.getViews(),
                 news.getCreatedAt(),
-                news.getCategory(),
-                news.getJournalist(),
-                news.getStadium()
+                news.getCategory().getId(),
+                news.getJournalist().getId(),
+                news.getStadium().getId()
         );
     }
-    public static News toEntity(NewsRequestDTO news) {
+
+    public static News toEntity(NewsRequestDTO dto) {
 
         News n = new News();
 
-        n.setTitle(news.title());
-        n.setSummary(news.summary());
-        n.setContent(news.content());
-        n.setImageUrl(news.imageUrl());
-        n.setFeatured(news.featured());
-        n.setViews(news.views());
-        n.setCreatedAt(news.createdAt());
-        n.setCategory(news.category());
-        n.setJournalist(news.journalist());
-        n.setStadium(news.stadium());
+        n.setTitle(dto.title());
+        n.setSummary(dto.summary());
+        n.setContent(dto.content());
+        n.setImageUrl(dto.imageUrl());
+        n.setFeatured(dto.featured());
+        n.setViews(dto.views());
+        n.setCreatedAt(dto.createdAt());
 
         return n;
-    }}
+    }
+}

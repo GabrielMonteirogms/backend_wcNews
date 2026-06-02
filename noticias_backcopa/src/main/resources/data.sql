@@ -30,53 +30,11 @@ VALUES ('Estadio Azteca', 'Mexico City', 'Mexico', 87523, 'azteca.jpg', 'Histori
 -- NEWS
 -- category_id, journalist_id e stadium_id
 
-INSERT INTO TBL_NEWS
-(TITLE, SUMMARY, CONTENT, IMAGE_URL, FEATURED, VIEWS, CREATED_AT, CATEGORY_ID, JOURNALIST_ID, STADIUM_ID)
-VALUES
-    (
-        'Brazil defeats Argentina',
-        'South American classic ends with Brazilian victory.',
-        'Brazil secured a 2-1 victory over Argentina in a thrilling match.',
-        'brazil-argentina.jpg',
-        TRUE,
-        1500,
-        CURRENT_TIMESTAMP,
-        1,
-        1,
-        1
-    );
+INSERT INTO TBL_NEWS(TITLE, SUMMARY, CONTENT, IMAGE_URL, FEATURED, VIEWS, CREATED_AT, CATEGORY_ID, JOURNALIST_ID, STADIUM_ID)
+VALUES('Brazil defeats Argentina', 'South American classic ends with Brazilian victory.','Brazil secured a 2-1 victory over Argentina in a thrilling match.','brazil-argentina.jpg',TRUE,1500,CURRENT_TIMESTAMP,1,1,1);
 
-INSERT INTO TBL_NEWS
-(TITLE, SUMMARY, CONTENT, IMAGE_URL, FEATURED, VIEWS, CREATED_AT, CATEGORY_ID, JOURNALIST_ID, STADIUM_ID)
-VALUES
-    (
-        'MetLife Stadium prepares for opening match',
-        'Organizers complete final inspections.',
-        'The stadium is ready to host one of the biggest events in football.',
-        'metlife-news.jpg',
-        TRUE,
-        900,
-        CURRENT_TIMESTAMP,
-        3,
-        2,
-        1
-    );
-
-INSERT INTO TBL_NEWS
-(TITLE, SUMMARY, CONTENT, IMAGE_URL, FEATURED, VIEWS, CREATED_AT, CATEGORY_ID, JOURNALIST_ID, STADIUM_ID)
-VALUES
-    (
-        'Mexico announces squad for World Cup',
-        'Coach reveals final list of players.',
-        'The national team announced its official squad for the tournament.',
-        'mexico-team.jpg',
-        FALSE,
-        650,
-        CURRENT_TIMESTAMP,
-        2,
-        3,
-        3
-    );
+INSERT INTO TBL_NEWS(TITLE, SUMMARY, CONTENT, IMAGE_URL, FEATURED, VIEWS, CREATED_AT, CATEGORY_ID, JOURNALIST_ID, STADIUM_ID)
+VALUES('MetLife Stadium prepares for opening match','Organizers complete final inspections.','The stadium is ready to host one of the biggest events in football.','metlife-news.jpg',TRUE,900,CURRENT_TIMESTAMP,3,2,1);
 
 -- COMMENTS
 

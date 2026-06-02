@@ -6,14 +6,13 @@ import com.work.noticias_copa.entities.Stadium;
 import com.work.noticias_copa.mappers.StadiumMapper;
 import com.work.noticias_copa.repositories.StadiumRepository;
 import jakarta.persistence.EntityNotFoundException;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class StadiumSevice {
+public class StadiumService {
 
     @Autowired
     private StadiumRepository repository;

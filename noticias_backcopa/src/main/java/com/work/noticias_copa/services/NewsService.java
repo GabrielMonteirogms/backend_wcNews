@@ -2,12 +2,11 @@ package com.work.noticias_copa.services;
 
 import com.work.noticias_copa.dtos.NewsRequestDTO;
 import com.work.noticias_copa.dtos.NewsResponseDTO;
-import com.work.noticias_copa.entities.News;
+import com.work.noticias_copa.entities.*;
 import com.work.noticias_copa.mappers.NewsMapper;
-import com.work.noticias_copa.repositories.NewsRepository;
+import com.work.noticias_copa.repositories.*;
 
 import jakarta.persistence.EntityNotFoundException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,12 +15,13 @@ import java.util.List;
 @Service
 public class NewsService {
 
-    @Autowired
-    private NewsRepository repository;
+    @Autowired private NewsRepository repository;
+    @Autowired private CategoryRepository categoryRepository;
+    @Autowired private JournalistRepository journalistRepository;
+    @Autowired private StadiumRepository stadiumRepository;
 
     public List<NewsResponseDTO> getNews() {
-        return repository.findAll()
-                .stream()
+        return repository.findAll().stream()
                 .map(NewsMapper::toDTO)
                 .toList();
     }
@@ -29,47 +29,73 @@ public class NewsService {
     public NewsResponseDTO findById(Long id) {
         return repository.findById(id)
                 .map(NewsMapper::toDTO)
-                .orElseThrow(() ->
-                        new EntityNotFoundException("News not found"));
+                .orElseThrow(() -> new EntityNotFoundException("News not found"));
     }
 
     public void deleteById(Long id) {
-
-        if(repository.existsById(id)) {
-            repository.deleteById(id);
-        }
-
-        else {
-            throw new EntityNotFoundException("News not found");
-        }
+        repository.deleteById(id);
     }
 
-    public NewsResponseDTO save(NewsRequestDTO news) {
+    public NewsResponseDTO save(NewsRequestDTO dto) {
 
-        News n = repository.save(
-                NewsMapper.toEntity(news)
-        );
+        News n = NewsMapper.toEntity(dto);
 
-        return NewsMapper.toDTO(n);
+        Category c = categoryRepository.findById(dto.categoryId())
+                .orElseThrow();
+
+        Journalist j = journalistRepository.findById(dto.journalistId())
+                .orElseThrow();
+
+        Stadium s = stadiumRepository.findById(dto.stadiumId())
+                .orElseThrow();
+
+        n.setCategory(c);
+        n.setJournalist(j);
+        n.setStadium(s);
+
+        return NewsMapper.toDTO(repository.save(n));
     }
 
-    public void update(NewsRequestDTO news, Long id) {
+    public void update(NewsRequestDTO dto, Long id) {
 
         News n = repository.findById(id)
-                .orElseThrow(() ->
-                        new EntityNotFoundException("News not found"));
+                .orElseThrow();
 
-        n.setTitle(news.title());
-        n.setSummary(news.summary());
-        n.setContent(news.content());
-        n.setImageUrl(news.imageUrl());
-        n.setFeatured(news.featured());
-        n.setViews(news.views());
-        n.setCreatedAt(news.createdAt());
-        n.setCategory(news.category());
-        n.setJournalist(news.journalist());
-        n.setStadium(news.stadium());
+        n.setTitle(dto.title());
+        n.setSummary(dto.summary());
+        n.setContent(dto.content());
+        n.setImageUrl(dto.imageUrl());
+        n.setFeatured(dto.featured());
+        n.setViews(dto.views());
+        n.setCreatedAt(dto.createdAt());
 
         repository.save(n);
+    }
+
+    //filtros:
+
+    public List<NewsResponseDTO> getFeatured() {
+        return repository.findByFeaturedTrue()
+                .stream().map(NewsMapper::toDTO).toList();
+    }
+
+    public List<NewsResponseDTO> getMostViewed() {
+        return repository.findAllByOrderByViewsDesc()
+                .stream().map(NewsMapper::toDTO).toList();
+    }
+
+    public List<NewsResponseDTO> getByCategory(Long id) {
+        return repository.findByCategoryId(id)
+                .stream().map(NewsMapper::toDTO).toList();
+    }
+
+    public List<NewsResponseDTO> getByJournalist(Long id) {
+        return repository.findByJournalistId(id)
+                .stream().map(NewsMapper::toDTO).toList();
+    }
+
+    public List<NewsResponseDTO> getByStadium(Long id) {
+        return repository.findByStadiumId(id)
+                .stream().map(NewsMapper::toDTO).toList();
     }
 }
