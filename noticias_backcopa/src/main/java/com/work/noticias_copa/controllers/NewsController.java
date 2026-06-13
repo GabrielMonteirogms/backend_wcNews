@@ -82,7 +82,7 @@ public class NewsController {
         return ResponseEntity.ok(service.getByCategory(id));
     }
 
-    @GetMapping("/data")
+    @GetMapping("/latest")
     public ResponseEntity<List<NewsResponseDTO>> getByData() {
         return ResponseEntity.ok(service.getCreatedAt());
     }
