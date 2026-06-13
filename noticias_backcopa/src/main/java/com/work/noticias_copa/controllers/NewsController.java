@@ -82,6 +82,11 @@ public class NewsController {
         return ResponseEntity.ok(service.getByCategory(id));
     }
 
+    @GetMapping("/data")
+    public ResponseEntity<List<NewsResponseDTO>> getByData() {
+        return ResponseEntity.ok(service.getCreatedAt());
+    }
+
     // 👤 By journalist
     @GetMapping("/journalist/{id}")
     public ResponseEntity<List<NewsResponseDTO>> getByJournalist(@PathVariable Long id) {

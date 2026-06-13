@@ -89,6 +89,7 @@ public class NewsService {
                 .stream().map(NewsMapper::toDTO).toList();
     }
 
+
     public List<NewsResponseDTO> getByJournalist(Long id) {
         return repository.findByJournalistId(id)
                 .stream().map(NewsMapper::toDTO).toList();
@@ -96,6 +97,11 @@ public class NewsService {
 
     public List<NewsResponseDTO> getByStadium(Long id) {
         return repository.findByStadiumId(id)
+                .stream().map(NewsMapper::toDTO).toList();
+    }
+
+    public List<NewsResponseDTO> getCreatedAt() {
+        return repository.findAllByOrderByCreatedAtDesc()
                 .stream().map(NewsMapper::toDTO).toList();
     }
 }
