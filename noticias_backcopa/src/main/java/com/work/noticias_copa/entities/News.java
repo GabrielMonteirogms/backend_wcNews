@@ -27,6 +27,9 @@ public class News implements java.io.Serializable {
 
     private String summary;
 
+    @Column(name = "video_url")
+    private String videoUrl;
+
     @Column(columnDefinition = "TEXT")
     private String content;
 

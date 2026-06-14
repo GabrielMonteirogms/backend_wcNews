@@ -11,8 +11,8 @@ public record NewsRequestDTO(
         Boolean featured,
         Integer views,
         LocalDateTime createdAt,
-
         Long categoryId,
+        String videoUrl,
         Long journalistId,
         Long stadiumId
 

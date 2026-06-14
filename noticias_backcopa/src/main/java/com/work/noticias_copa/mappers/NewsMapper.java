@@ -18,6 +18,7 @@ public class NewsMapper {
                 news.getViews(),
                 news.getCreatedAt(),
                 news.getCategory().getId(),
+                news.getVideoUrl(),
                 news.getJournalist().getId(),
                 news.getStadium().getId()
         );
@@ -31,6 +32,7 @@ public class NewsMapper {
         n.setSummary(dto.summary());
         n.setContent(dto.content());
         n.setImageUrl(dto.imageUrl());
+        n.setVideoUrl(dto.videoUrl());
         n.setFeatured(dto.featured());
         n.setViews(dto.views());
         n.setCreatedAt(dto.createdAt());

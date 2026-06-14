@@ -12,8 +12,8 @@ public record NewsResponseDTO(
         Boolean featured,
         Integer views,
         LocalDateTime createdAt,
-
         Long categoryId,
+        String videoUrl,
         Long journalistId,
         Long stadiumId
 

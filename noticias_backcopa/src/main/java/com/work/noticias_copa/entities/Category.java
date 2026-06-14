@@ -17,6 +17,7 @@ import java.util.List;
 public class Category implements java.io.Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
     private String name;
