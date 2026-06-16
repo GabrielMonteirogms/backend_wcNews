@@ -24,6 +24,7 @@ public class Category implements java.io.Serializable {
 
     private String description;
 
+
     @OneToMany(mappedBy = "category")
     @JsonIgnore
     private List<News> news;

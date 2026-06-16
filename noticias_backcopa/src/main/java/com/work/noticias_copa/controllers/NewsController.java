@@ -25,6 +25,7 @@ public class NewsController {
         return ResponseEntity.ok(service.getNews());
     }
 
+
     @GetMapping("{id}")
     public ResponseEntity<NewsResponseDTO> getById(@PathVariable Long id) {
         return ResponseEntity.ok(service.findById(id));
@@ -44,7 +45,7 @@ public class NewsController {
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
-                .path("/{id}")
+                .path("id}")
                 .buildAndExpand(n.id())
                 .toUri();
 
@@ -60,23 +61,16 @@ public class NewsController {
         return ResponseEntity.noContent().build();
     }
 
-
-    // filtros:
-
-
-    // ⭐ Featured news
     @GetMapping("/featured")
     public ResponseEntity<List<NewsResponseDTO>> getFeatured() {
         return ResponseEntity.ok(service.getFeatured());
     }
 
-    // 👀 Most viewed
     @GetMapping("/most-viewed")
     public ResponseEntity<List<NewsResponseDTO>> getMostViewed() {
         return ResponseEntity.ok(service.getMostViewed());
     }
 
-    // 🏷️ By category
     @GetMapping("/category/{id}")
     public ResponseEntity<List<NewsResponseDTO>> getByCategory(@PathVariable Long id) {
         return ResponseEntity.ok(service.getByCategory(id));
@@ -87,15 +81,16 @@ public class NewsController {
         return ResponseEntity.ok(service.getCreatedAt());
     }
 
-    // 👤 By journalist
     @GetMapping("/journalist/{id}")
     public ResponseEntity<List<NewsResponseDTO>> getByJournalist(@PathVariable Long id) {
         return ResponseEntity.ok(service.getByJournalist(id));
     }
 
-    // 🏟️ By stadium
     @GetMapping("/stadium/{id}")
     public ResponseEntity<List<NewsResponseDTO>> getByStadium(@PathVariable Long id) {
         return ResponseEntity.ok(service.getByStadium(id));
     }
+
+
+
 }

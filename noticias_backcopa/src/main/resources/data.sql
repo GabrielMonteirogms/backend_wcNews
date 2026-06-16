@@ -4,6 +4,7 @@
 INSERT INTO TBL_CATEGORY (NAME, DESCRIPTION) VALUES ('Matches', 'News related to World Cup matches');
 INSERT INTO TBL_CATEGORY (NAME, DESCRIPTION) VALUES ('Teams', 'News related to national teams');
 INSERT INTO TBL_CATEGORY (NAME, DESCRIPTION) VALUES ('Stadiums', 'News related to World Cup stadiums');
+INSERT INTO TBL_CATEGORY (NAME, DESCRIPTION) VALUES ('Curiosities' ,'News related to World Cup curiosities');
 
 -- JOURNALIST
 
@@ -16,6 +17,66 @@ VALUES ('John Miller', 'john@worldcup.com', 'USA', 'john.jpg', 'American reporte
 INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
 VALUES ('Miguel Torres', 'miguel@worldcup.com', 'Mexico', 'miguel.jpg', 'Football journalist and World Cup analyst.');
 
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Casimiro Miguel', 'casimiro@worldcup.com', 'Brazil', 'casimiro.jpg', 'Brazilian sports presenter and creator of CazéTV, known for covering major football events.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('André Henning', 'andre@worldcup.com', 'Brazil', 'andre.jpg', 'Brazilian football commentator recognized for his energetic match coverage.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Tino Marcos', 'tino@worldcup.com', 'Brazil', 'tino.jpg', 'Veteran Brazilian journalist with extensive World Cup experience.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Eric Faria', 'eric@worldcup.com', 'Brazil', 'eric.jpg', 'Brazilian field reporter specialized in football coverage.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('João Guilherme', 'joao@worldcup.com', 'Brazil', 'joao.jpg', 'Brazilian sports narrator covering international football tournaments.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Fabrizio Romano', 'fabrizio@worldcup.com', 'Italy', 'fabrizio.jpg', 'Italian football journalist known worldwide for transfer market news.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Gary Lineker', 'gary@worldcup.com', 'England', 'gary.jpg', 'English presenter and former footballer covering major international competitions.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Alex Scott', 'alex@worldcup.com', 'England', 'alexscott.jpg', 'English football analyst and television presenter.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Kate Abdo', 'kate@worldcup.com', 'England', 'kateabdo.jpg', 'International sports broadcaster known for football coverage.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Henry Winter', 'henry@worldcup.com', 'England', 'henrywinter.jpg', 'Experienced football writer and international tournament analyst.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Grant Wahl', 'grant@worldcup.com', 'USA', 'grantwahl.jpg', 'American football journalist widely recognized for World Cup reporting.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Taylor Twellman', 'taylor@worldcup.com', 'USA', 'taylor.jpg', 'American football analyst and commentator.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Herculez Gomez', 'herculez@worldcup.com', 'USA', 'herculez.jpg', 'Football analyst focused on North American football.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('David Faitelson', 'david@worldcup.com', 'Mexico', 'david.jpg', 'Mexican sports journalist known for football analysis.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Marion Reimers', 'marion@worldcup.com', 'Mexico', 'marion.jpg', 'Mexican football commentator and television host.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Guillem Balague', 'guillem@worldcup.com', 'Spain', 'guillem.jpg', 'Spanish football journalist covering European and international football.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Sid Lowe', 'sid@worldcup.com', 'Spain', 'sidlowe.jpg', 'Spanish football writer specializing in international competitions.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Julien Laurens', 'julien@worldcup.com', 'France', 'julien.jpg', 'French football journalist and international analyst.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY)
+VALUES ('Hugo Gatti', 'hugo@worldcup.com', 'Argentina', 'hugogatti.jpg', 'Argentine football commentator and former professional goalkeeper.');
+
+INSERT INTO TBL_JOURNALIST (NAME, EMAIL, COUNTRY, PHOTO_URL, BIOGRAPHY) VALUES ('Martin Liberman', 'martin@worldcup.com', 'Argentina', 'martin.jpg', 'Argentine sports journalist covering international football events.');
+
+
 -- STADIUM
 
 INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
@@ -26,6 +87,45 @@ VALUES ('AT&T Stadium', 'Arlington', 'USA', 80000, 'att.jpg', 'One of the larges
 
 INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
 VALUES ('Estadio Azteca', 'Mexico City', 'Mexico', 87523, 'azteca.jpg', 'Historic World Cup stadium.', 1966);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('Mercedes-Benz Stadium', 'Atlanta', 'USA', 71000, 'mercedes-benz.jpg', 'Host venue for FIFA World Cup 2026 matches.', 2017);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('Gillette Stadium', 'Foxborough', 'USA', 65878, 'gillette.jpg', 'World Cup venue located near Boston.', 2002);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('Hard Rock Stadium', 'Miami Gardens', 'USA', 65326, 'hardrock.jpg', 'Host stadium for FIFA World Cup 2026.', 1987);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('NRG Stadium', 'Houston', 'USA', 72220, 'nrg.jpg', 'Major venue selected for the World Cup.', 2002);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('Arrowhead Stadium', 'Kansas City', 'USA', 76416, 'arrowhead.jpg', 'One of the loudest stadiums in the world.', 1972);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('SoFi Stadium', 'Los Angeles', 'USA', 70000, 'sofi.jpg', 'Modern stadium hosting World Cup matches.', 2020);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('Lincoln Financial Field', 'Philadelphia', 'USA', 67594, 'lincoln.jpg', 'Philadelphia World Cup venue.', 2003);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('Lumen Field', 'Seattle', 'USA', 68740, 'lumen.jpg', 'Seattle host stadium for the World Cup.', 2002);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('Levis Stadium', 'Santa Clara', 'USA', 68500, 'levis.jpg', 'San Francisco Bay Area World Cup venue.', 2014);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('BC Place', 'Vancouver', 'Canada', 54500, 'bcplace.jpg', 'Canadian host stadium for FIFA World Cup 2026.', 1983);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('BMO Field', 'Toronto', 'Canada', 45000, 'bmofield.jpg', 'Toronto venue for the FIFA World Cup.', 2007);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('Estadio BBVA', 'Monterrey', 'Mexico', 53500, 'bbva.jpg', 'Modern Mexican venue selected for the tournament.', 2015);
+
+INSERT INTO TBL_STADIUM (NAME, CITY, COUNTRY, CAPACITY, IMAGE_URL, DESCRIPTION, OPENED_YEAR)
+VALUES ('Estadio Akron', 'Guadalajara', 'Mexico', 49850, 'akron.jpg', 'Host stadium in Guadalajara.', 2010);
 
 -- NEWS
 -- category_id, journalist_id e stadium_id
@@ -175,14 +275,3 @@ VALUES
         3,
         2
     );
-
--- COMMENTS
-
-INSERT INTO TBL_COMMENT (AUTHOR_NAME, MESSAGE, CREATED_AT, NEWS_ID)
-VALUES ('Gabriel', 'Great match!', CURRENT_TIMESTAMP, 1);
-
-INSERT INTO TBL_COMMENT (AUTHOR_NAME, MESSAGE, CREATED_AT, NEWS_ID)
-VALUES ('Lucas', 'Brazil played very well.', CURRENT_TIMESTAMP, 1);
-
-INSERT INTO TBL_COMMENT (AUTHOR_NAME, MESSAGE, CREATED_AT, NEWS_ID)
-VALUES ('Maria', 'I cant wait for the tournament.', CURRENT_TIMESTAMP, 2);

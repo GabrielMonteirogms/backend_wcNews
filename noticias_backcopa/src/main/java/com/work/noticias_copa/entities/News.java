@@ -24,7 +24,6 @@ public class News implements java.io.Serializable {
     private Long id;
 
     private String title;
-
     private String summary;
 
     @Column(name = "video_url")
@@ -34,11 +33,8 @@ public class News implements java.io.Serializable {
     private String content;
 
     private String imageUrl;
-
     private Boolean featured;
-
     private Integer views;
-
     private LocalDateTime createdAt;
 
     @ManyToOne
@@ -53,6 +49,6 @@ public class News implements java.io.Serializable {
     @JoinColumn(name = "stadium_id")
     private Stadium stadium;
 
-    @OneToMany(mappedBy = "news")
+    @OneToMany(mappedBy = "news", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments;
 }
