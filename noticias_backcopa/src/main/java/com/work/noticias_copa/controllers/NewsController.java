@@ -45,7 +45,7 @@ public class NewsController {
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
-                .path("id}")
+                .path("/{id}")
                 .buildAndExpand(n.id())
                 .toUri();
 

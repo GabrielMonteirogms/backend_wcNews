@@ -16,7 +16,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/categories")
+@RequestMapping("/news/categories")
 @CrossOrigin
 public class CategoryController {
 

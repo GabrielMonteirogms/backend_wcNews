@@ -49,6 +49,4 @@ public class News implements java.io.Serializable {
     @JoinColumn(name = "stadium_id")
     private Stadium stadium;
 
-    @OneToMany(mappedBy = "news", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Comment> comments;
 }
