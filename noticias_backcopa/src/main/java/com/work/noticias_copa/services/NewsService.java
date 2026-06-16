@@ -65,6 +65,7 @@ public class NewsService {
         n.setSummary(dto.summary());
         n.setContent(dto.content());
         n.setImageUrl(dto.imageUrl());
+        n.setVideoUrl(dto.videoUrl());
         n.setFeatured(dto.featured());
         n.setViews(dto.views());
         n.setCreatedAt(dto.createdAt());

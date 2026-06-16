@@ -275,3 +275,18 @@ VALUES
         3,
         2
     );
+INSERT INTO TBL_NEWS
+(TITLE, SUMMARY, CONTENT, IMAGE_URL, VIDEO_URL, FEATURED, VIEWS, CREATED_AT, CATEGORY_ID, JOURNALIST_ID, STADIUM_ID)
+VALUES ('Neymar has 79 international goals and leads Brazil’s all-time scoring list.',
+        'Neymar tem 79 gols pela Seleção Brasileira e ocupa o topo da lista de maiores artilheiros da história do país. Ele está à frente de Pelé no ranking histórico de gols pela equipe nacional.',
+        'Neymar currently has 79 goals for the Brazilian national team, establishing himself as the all-time leading scorer in the team’s history. The forward reached this milestone throughout his international career, surpassing long-standing records that were previously attributed to Pelé for decades. With this achievement, Neymar stands at the top of Brazil’s all-time scoring chart, reinforcing his status as one of the most important players in the country’s football history. His record reflects not only longevity and consistent high-level performance, but also his decisive impact in both official competitions and international friendlies.',
+        'https://images.ctfassets.net/3mv54pzvptwz/55YLwKPDnRXkqMBITRpWbC/0c2aefc04afa455c20e9ca0d209698e0/53174188191_42d4c831ae_o.jpg',
+        'https://www.youtube.com/watch?v=UcLXIG3W7u4',
+        FALSE,
+        2500,
+        CURRENT_TIMESTAMP,
+        4,
+        3,
+        4
+       );
+

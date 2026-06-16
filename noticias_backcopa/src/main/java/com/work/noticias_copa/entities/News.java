@@ -26,13 +26,12 @@ public class News implements java.io.Serializable {
     private String title;
     private String summary;
 
-    @Column(name = "video_url")
-    private String videoUrl;
-
     @Column(columnDefinition = "TEXT")
     private String content;
 
     private String imageUrl;
+    @Column(name = "video_url")
+    private String videoUrl;
     private Boolean featured;
     private Integer views;
     private LocalDateTime createdAt;
